@@ -1,11 +1,21 @@
 .App {
   text-align: center;
 }
+.information {
+  text-align: left;
+}
+.informationContent {
+  text-align: left;
+}
+
+.Buttom {
+  text-align: left;
+}
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  height: 15vmin;
   pointer-events: none;
+  margin-left: 10px;
 }
 
 .App-header {

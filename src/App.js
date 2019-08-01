@@ -1,26 +1,56 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
 import './App.css';
+import Buttom from "./components/Buttom"
+import Home from "./components/Home"
+import Information from "./components/Information"
+import Content from "./components/Content"
+import HomeContent from "./components/HomeContent"
+import InformationContent from "./components/InformationContent"
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+class App extends Component{
+  constructor(props){
+    super(props);
+    this.state = {
+      mode: 'home',// home 모드 : 기본화면
+      home:{desc: <HomeContent></HomeContent>},
+      information:{desc: <InformationContent></InformationContent>},
+    }
+  }
+  render(){
+    var _desc = null;
+    if(this.state.mode === 'home'){
+      _desc = this.state.home.desc;
+    }
+    else if(this.state.mode ==='information'){
+      _desc = this.state.information.desc;
+    }
+
+    return(
+      <div className = "App">
+      
+        <Home
+          onChangePage = {function(){
+            this.setState({mode:'home'});
+          }.bind(this)}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          
+        </Home>
+
+        <Information
+          onChangePage = {function(){
+            this.setState({mode:'information'});
+            }.bind(this)}
+        >
+
+        </Information>
+
+        <Content desc={_desc}></Content>
+
+        <Buttom></Buttom>
+        
+      </div>
+    )
+  }
 }
 
 export default App;
