@@ -1,11 +1,11 @@
 import React, {Component} from 'react';
 import './App.css';
 import Buttom from "./components/Buttom"
-import Home from "./components/Home"
 import Information from "./components/Information"
 import Content from "./components/Content"
 import HomeContent from "./components/HomeContent"
 import InformationContent from "./components/InformationContent"
+import PaymentContent from "./components/PaymentContent"
 
 class App extends Component{
   constructor(props){
@@ -14,6 +14,7 @@ class App extends Component{
       mode: 'home',// home 모드 : 기본화면
       home:{desc: <HomeContent></HomeContent>},
       information:{desc: <InformationContent></InformationContent>},
+      payment:{desc : <PaymentContent></PaymentContent>}
     }
   }
   render(){
@@ -27,19 +28,17 @@ class App extends Component{
 
     return(
       <div className = "App">
-      
-        <Home
-          onChangePage = {function(){
-            this.setState({mode:'home'});
-          }.bind(this)}
-        >
-          
-        </Home>
 
         <Information
+          onChangePageHome = {function(){
+            this.setState({mode:'home'});
+          }.bind(this)}
           onChangePage = {function(){
             this.setState({mode:'information'});
             }.bind(this)}
+          onChangePageToPayment = {function(){
+            this.setState({mode:'payment'});
+          }.bind(this)}
         >
 
         </Information>
@@ -47,7 +46,7 @@ class App extends Component{
         <Content desc={_desc}></Content>
 
         <Buttom></Buttom>
-        
+
       </div>
     )
   }

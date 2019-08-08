@@ -1,21 +1,82 @@
-.App {
-  text-align: right;
+* {
+
 }
-.information {
-  text-align: right;
-}
-.informationContent {
-  text-align: right;
+a {
+
 }
 
-.Buttom {
-  text-align: right;
+.topnav {
+
+}
+
+.App{
+
+}
+
+.inforamtionButton {
+  position: relative;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.inforamtionButton:hover {
+  background-color: black;
+  color: white;
+}
+
+.paymentButton {
+  position: relative;
+  background-color: #f1f1f1;
+  color: black;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+}
+
+.paymentButton:hover {
+  background-color: black;
+  color: white;
 }
 
 .App-logo {
-  height: 15vmin;
-  pointer-events: none;
-  margin-left: 10px;
+  position: relative;
+  height: 10vmin;
+}
+
+.information {
+  text-align: center;
+  overflow: hidden;
+  background-color: #333;
+}
+
+.homeContent {
+  display: relative;
+  background-color: #ddd;
+  width: 100%;
+  padding: 25px;
+  text-align: center;
+}
+
+.informationContent {
+  text-align: left;
+  background-color: #ddd;
+  width: 100%;
+  padding: 25px;
+}
+
+.buttom {
+  background-color: #f1f1f1;
+  padding: 10px;
 }
 
 .App-header {
