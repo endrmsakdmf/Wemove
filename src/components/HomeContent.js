@@ -22,9 +22,8 @@ class HomeContent extends Component{
                 <a href="/" onClick={
                     function(e){
                         e.preventDefault();
-                        this.setState({mode: 'information'});//information 모드로 상태 설정되면 이용안내 문구 표시
-                    }
-                    }
+                        this.props.onChangeMode('information');//information 모드로 상태 설정되면 이용안내 문구 표시
+                    }.bind(this)}
                 >
                 더 알아보기
                 </a>

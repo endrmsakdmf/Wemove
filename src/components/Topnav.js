@@ -1,40 +1,39 @@
 import React, {Component} from 'react';
-import wemovelogo from './wemove_logo.svg';
 
-class Information extends Component{
+class Topnav extends Component{
     render(){
         return(
             <div className="topnav">
                 <a className="Home" href="/" onClick={
                     function(e){
                     e.preventDefault();
-                    this.props.onChangePageHome();
-                     }.bind(this)// reservation 모드로 상태 설정되면 예약창 불러와야함
-                     }
+                    this.props.onChangeMode('home');
+                     }.bind(this)
+                   }
                 >
-                <img src={wemovelogo} className = "App-logo" />
+                Homes
                 </a>
                 <a  className="inforamtionButton"
                     href='/'
                     onClick={function(e){
                     e.preventDefault();
-                    this.props.onChangePage();
+                    this.props.onChangeMode('information');
                     }.bind(this)}
                     >
                     이용방법
-                </a>이용방법 보는 버튼
+                </a>
                 <a  className="paymentButton"
                     href='/'
                     onClick={function(e){
                     e.preventDefault();
-                    this.props.onChangePageToPayment();
+                    this.props.onChangeMode('payment');
                     }.bind(this)}
                 >
                     결제하기
-                </a>결제하기 버튼
+                </a>
             </div>
        )
     }
 }
 
-export default Information;
+export default Topnav;

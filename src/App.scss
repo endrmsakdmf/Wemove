@@ -1,12 +1,14 @@
 * {
-
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 a {
 
 }
 
 .topnav {
-
+  overflow: hidden;
+  background-color: #333;
 }
 
 .App{
@@ -23,6 +25,7 @@ a {
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+  display: inline-block;
 }
 
 .inforamtionButton:hover {
