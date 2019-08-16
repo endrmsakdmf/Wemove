@@ -8,10 +8,9 @@ class Topnav extends Component{
                     function(e){
                     e.preventDefault();
                     this.props.onChangeMode('home');
-                     }.bind(this)
-                   }
+                     }.bind(this)}
                 >
-                Homes
+                Home
                 </a>
                 <a  className="inforamtionButton"
                     href='/'

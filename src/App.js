@@ -8,20 +8,24 @@ import InformationContent from "./components/InformationContent"
 import PaymentContent from "./components/PaymentContent"
 
 
+
 class App extends Component{
-  constructor(props){
-    super(props);
-    this.state = {
-      mode: 'home',// home 모드 : 기본화면
-      home:{desc: <HomeContent
-                    onChangeMode = {function(_mode){
-                      this.setState({mode:_mode});
-                    }.bind(this)}
-                  ></HomeContent>},
-      information:{desc: <InformationContent></InformationContent>},
-      payment:{desc : <PaymentContent></PaymentContent>}
+    constructor(props){
+      super(props);
+      this.state = {
+        mode: 'home',// home 모드 : 기본화면
+        home:{desc: <HomeContent
+                      onChangeMode = {function(_mode){
+                        this.setState({mode:_mode});
+                      }.bind(this)}
+                    ></HomeContent>},
+        information:{desc: <InformationContent
+
+                            ></InformationContent>},
+        payment:{desc : <PaymentContent></PaymentContent>}
+      }
     }
-  }
+
   render(){
 
     var _desc = null;
@@ -30,6 +34,9 @@ class App extends Component{
     }
     else if(this.state.mode ==='information'){
       _desc = this.state.information.desc;
+    }
+    else if(this.state.mode ==='payment'){
+      _desc = this.state.payment.desc;
     }
 
     return(
@@ -44,9 +51,22 @@ class App extends Component{
 
         </Topnav>
 
-        <Content desc={_desc}></Content>
+        <Content
+          desc={_desc}
+          onChangeMode = {function(_mode){
+            this.setState({mode:_mode});
+          }.bind(this)}
+        >
 
-        <Buttom></Buttom>
+        </Content>
+
+        <Buttom
+          onChangeMode = {function(_mode){
+            this.setState({mode:_mode});
+          }.bind(this)}
+        >
+
+        </Buttom>
 
       </div>
     )

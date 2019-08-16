@@ -1,89 +1,55 @@
-$bg-color : red;
-
 * {
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: inherit;
+}
+img {
+  border-style: none;
+  vertical-align: middle;
+  width: 100%;
 }
 a {
 
 }
-
 .topnav {
   overflow: hidden;
   background-color: #333;
+  font-family: "BmHanna"
 }
-
 .App{
-
 }
-
-.inforamtionButton {
+.topnav a {
   position: relative;
   background-color: #f1f1f1;
   color: black;
   font-size: 16px;
-  padding: 16px 30px;
-  border: none;
+  padding: 12px 18px;
+  border-style: inherit;
   cursor: pointer;
-  border-radius: 5px;
+  border-radius: 1px;
   text-align: center;
+  text-decoration: none;
   display: inline-block;
+  &:hover {
+    background-color: #333;
+    color: white;
+  }
 }
-
-.inforamtionButton:hover {
-  background-color: black;
-  color: white;
-}
-
-.paymentButton {
-  position: relative;
-  background-color: #f1f1f1;
-  color: black;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-  text-align: center;
-  display: inline-block;
-}
-
-.paymentButton:hover {
-  background-color: black;
-  color: white;
-}
-
-.App-logo {
-  position: relative;
-  height: 10vmin;
-}
-
 .information {
   text-align: center;
   overflow: hidden;
   background-color: #333;
 }
-
-.homeContent {
-  display: relative;
-  background-color: #ddd;
-  width: 100%;
-  padding: 25px;
-  text-align: center;
-}
-
 .informationContent {
   text-align: left;
-  background-color: #ddd;
+  background-image: url("./components/busan.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
   width: 100%;
   padding: 25px;
 }
-
 .buttom {
   background-color: #f1f1f1;
   padding: 10px;
 }
-
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -94,11 +60,85 @@ a {
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
+.homeContent {
+  display: relative;
+  background: seoul-image-container;
+  background-size: cover;
+  width: 100%;
+  text-align: center;
+  font-family: "Bukchontown";
+  & h1 {
+    font-size: 50px;
+  }
+}
+.HomeContent {
+    height: 30vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.Home-content1 {
+    height: 100%;
+    display: block;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 200px;
+    padding-bottom: 280px;
+    & h1 {
+      letter-spacing: 4px;
+      font-size: 70px;
+    }
+    & h2 {
+      font-size: 30px;
+    }
+}
+.Home-content2 {
+  font-size: 40px;
+  font-weight: 700;
+  background-image: url("./components/busan.jpg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 280px;
+  text-align: center;
+  & a {
+    position: relative;
+    background-color: #f1f1f1;
+    color: black;
+    font-size: 30px;
+    padding: 12px 18px;
+    border-style: inherit;
+    cursor: pointer;
+    border-radius: 1px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  & ol {
+    display: inline-block;
+    padding: 0 5px 0 0;
+  }
+  & li {
+    text-align: left;
+  }
+}
+.Home-content3 {
+  font-family: 'NanumBarunGothic';
+}
+@media (min-width: 650px ) {
+    .HomeContent {
+        background-position: center center;
+    }
 
+    .Home-content {
+        align-items: flex-end;
+        justify-content: center;
+    }
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -106,4 +146,39 @@ a {
   to {
     transform: rotate(360deg);
   }
+}
+@font-face {
+  font-family: 'BmHanna';
+  src:url(./fonts/BM-HANNA.eot) format("embedded-opentype"),
+      url(./fonts/BM-HANNA.svg) format("svg"),
+      url(./fonts/BM-HANNA.ttf) format("truetype"),
+      url(./fonts/BM-HANNA.woff) format("woff");
+}
+@font-face {
+  font-family: 'BmJua';
+  src:url(./fonts/BM-JUA.eot) format("embedded-opentype"),
+      url(./fonts/BM-JUA.svg) format("svg"),
+      url(./fonts/BM-JUA.ttf) format("truetype"),
+      url(./fonts/BM-JUA.woff) format("woff");
+}
+@font-face {
+  font-family: 'NanumBarunGothic';
+  src:url(./fonts/NanumBarunGothic.eot) format("embedded-opentype"),
+      url(./fonts/NanumBarunGothic.svg) format("svg"),
+      url(./fonts/NanumBarunGothic.ttf) format("truetype"),
+      url(./fonts/NanumBarunGothic.woff) format("woff");
+}
+@font-face {
+  font-family: 'Bukchontown';
+  src:url(./fonts/Bukchontown.eot) format("embedded-opentype"),
+      url(./fonts/Bukchontown.svg) format("svg"),
+      url(./fonts/Bukchontown.ttf) format("truetype"),
+      url(./fonts/Bukchontown.woff) format("woff");
+}
+@font-face {
+  font-family: 'NanumBarunGothicBold';
+  src:url(./fonts/NanumBarunGothicBold.eot) format("embedded-opentype"),
+      url(./fonts/NanumBarunGothicBold.svg) format("svg"),
+      url(./fonts/NanumBarunGothicBold.ttf) format("truetype"),
+      url(./fonts/NanumBarunGothicBold.woff) format("woff");
 }

@@ -9,12 +9,12 @@ class Buttom extends Component{
                 TEL : 010-3525-0647
                 E-mail : aviachch@gmail.com
                 <a href="/" onClick={
-                    function(e){
-                    e.preventDefault();
-                    this.setState({mode: 'reservation'});
-                    }
-                    }>
-                    <br></br>
+                  function(e){
+                  e.preventDefault();
+                  this.props.onChangeMode("payment");
+                  }.bind(this)}
+                >
+                  <br></br>
                     신청하기
                 </a>
             </div>
