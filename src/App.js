@@ -13,7 +13,7 @@ class App extends Component{
     constructor(props){
       super(props);
       this.state = {
-        mode: 'home',// home 모드 : 기본화면
+        mode: 'information',// home 모드 : 기본화면
         home:{desc: <HomeContent
                       onChangeMode = {function(_mode){
                         this.setState({mode:_mode});

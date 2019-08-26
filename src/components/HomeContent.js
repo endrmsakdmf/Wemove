@@ -1,6 +1,5 @@
 import React from 'react';
 import seoul from './seoul.jpg'
-import busan from './busan.jpg'
 
 const HomeContent = () => {
 
@@ -17,11 +16,14 @@ const HomeContent = () => {
                </h2>
             </div>
             <div className="Home-content2">
-               <ol>
-                   <li>픽업 기숙사 1층에 짐을 내려놓으세요</li>
-                   <li>보관 보안, 위생시스템이 갖춰진 부경대 근처 창고에서 안전하게 보관합니다</li>
-                   <li>찾기 개학날에 기숙사 1층에서 짐을 찾으세요</li>
-               </ol>
+              <video autoplay ></video>
+                <h2>
+                <div className="Home-content2-card">
+                  1. 기숙사 1층에 짐을 내려놓으세요<br></br><br></br>
+                  2. 보안, 위생시스템이 갖춰진 부경대 근처 창고에서 안전하게 보관합니다<br></br><br></br>
+                  3. 개강 날에 기숙사 1층에서 짐을 찾으세요<br></br>
+                </div>
+                </h2>
                <br></br>
                <a href='/' onClick={
                    function(e){
@@ -33,10 +35,6 @@ const HomeContent = () => {
                </a>
             </div>
             <div className="Home-content3">
-               <h1>
-               궁금한점 있으시면 <br></br>
-               언제든지 문의주세요
-               </h1>
                <h2>카카오톡 플러스친구 ‘위무브’를 검색해주세요</h2>
                <h2>문의전화 010-3525-0647</h2>
             </div>

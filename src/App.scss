@@ -12,7 +12,13 @@ a {
 .topnav {
   overflow: hidden;
   background-color: #333;
-  font-family: "BmHanna"
+  font-family: "BmHanna";
+  position : fixed;
+  box-sizing: border-box;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  transition: align-items .2s;
 }
 .App{
 }
@@ -37,14 +43,6 @@ a {
   text-align: center;
   overflow: hidden;
   background-color: #333;
-}
-.informationContent {
-  text-align: left;
-  background-image: url("./components/busan.jpg");
-  background-repeat: repeat-y;
-  background-size: cover;
-  width: 100%;
-  padding: 25px;
 }
 .buttom {
   background-color: #f1f1f1;
@@ -81,6 +79,8 @@ a {
     background-position: top center;
 }
 .Home-content1 {
+    font-family: "Bukchontown";
+    text-shadow: 1px 1px gray;
     height: 100%;
     display: block;
     flex-direction: column;
@@ -96,10 +96,20 @@ a {
       font-size: 30px;
     }
 }
+.Home-content2-card{
+  padding: 5px 5px 5px 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
+  transition: 0.3s;
+  /* RGBa with 0.6 opacity */
+  background: rgba(255, 255, 255, 0.5);
+  /* For IE 5.5 - 7*/
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
+  /* For IE 8*/
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
+}
 .Home-content2 {
-  font-size: 40px;
-  font-weight: 700;
-  background-image: url("./components/busan.jpg");
+  font-size: 20px;
+  background-image: url("./components/newyork.jpeg");
   background-repeat: repeat-y;
   background-size: cover;
   padding-top: 200px;
@@ -113,21 +123,35 @@ a {
     padding: 12px 18px;
     border-style: inherit;
     cursor: pointer;
-    border-radius: 1px;
+    border-radius: 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
   }
-  & ol {
-    display: inline-block;
-    padding: 0 5px 0 0;
-  }
-  & li {
-    text-align: left;
-  }
 }
+
 .Home-content3 {
-  font-family: 'NanumBarunGothic';
+  font-family: 'Bukchontown';
+  background-image: url("./components/tokyo.jpeg");
+  background-size: cover;
+  background-repeat:repeat-y;
+  padding-top: 200px;
+  padding-bottom: 280px;
+  text-align: center;
+  font-size: 15px;
+  text-shadow: 1.5px 1.5px gray;
+  color: black;
+}
+.informationContent {
+  text-align: left;
+  background-image: url("./components/street.jpeg");
+  background-repeat: repeat-y;
+  background-size: cover;
+  width: 100%;
+  padding: 25px;
+  color: black;
+  text-align: center;
+  font-family: BmHanna;
 }
 @media (min-width: 650px ) {
     .HomeContent {
